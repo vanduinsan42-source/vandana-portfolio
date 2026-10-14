@@ -1,0 +1,285 @@
+
+.home-page {
+  overflow: hidden;
+  background: #f5eee1;
+  color: #211b12;
+  font-family: Arial, sans-serif;
+}
+
+/* Main hero layout */
+.hero-section {
+  min-height: 430px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 45px 10%;
+  gap: 40px;
+}
+
+/* Left introduction */
+.intro-content {
+  max-width: 440px;
+  z-index: 1;
+}
+
+.intro-content h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin-bottom: 18px;
+}
+
+.intro-description {
+  max-width: 360px;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #0f4919;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background: #1c743e;
+  color: #fff;
+}
+
+/* Portrait on the right */
+.portrait-section {
+  min-height: 370px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait-image {
+  position: relative;
+  z-index: 1;
+  width: 72%;
+  height: 588px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 2px;
+}
+
+/* Orange information labels */
+.info-pill {
+  position: absolute;
+  z-index: 4;
+  background: #a45e2c;
+  color: #fff9f4;
+  padding: 14px 24px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 13px;
+  min-width: 165px;
+}
+
+.date-pill {
+  top: 27%;
+  left: 0;
+}
+
+.language-pill {
+  right: -2%;
+  top: 51%;
+}
+
+/* Black contact card */
+.contact-card {
+  position: absolute;
+  z-index: 3;
+  bottom: -15px;
+  left: 12%;
+  width: 75%;
+  background: #080808;
+  color: #fff;
+  padding: 18px 22px;
+}
+
+.contact-card h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.contact-card i {
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* Bottom green section */
+.education-section {
+  min-height: 160px;
+  background: #304c36;
+  color: #ffad0a;
+  padding: 35px 16%;
+}
+
+.education-section h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.education-section p {
+  color: #f5eee1;
+  font-size: 14px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 40px 7%;
+    gap: 20px;
+  }
+
+  .intro-content {
+    max-width: 100%;
+  }
+
+  .intro-content h1 {
+    font-size: 48px;
+  }
+
+  .portrait-section {
+    min-height: 390px;
+    margin: 10px 0 20px;
+  }
+
+  .portrait-image {
+    width: 70%;
+    height: 320px;
+  }
+
+  .date-pill {
+    left: -2%;
+  }
+
+  .language-pill {
+    right: -2%;
+  }
+
+  .contact-card {
+    left: 12%;
+    width: 76%;
+  }
+
+  .education-section {
+    padding: 30px 7%;
+  }
+}
+
+@media (max-width: 420px) {
+  .intro-content h1 {
+    font-size: 42px;
+  }
+
+  .portrait-section {
+    min-height: 340px;
+  }
+
+  .portrait-image {
+    height: 270px;
+  }
+
+  .info-pill {
+    min-width: auto;
+    padding: 11px 14px;
+    font-size: 11px;
+  }
+
+  .contact-card {
+    padding: 15px;
+  }
+}
+
+.contact-email-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 22px;
+  background: #ca8a56;
+  border: 1px solid #a45e2c;
+  border-radius: 4px;
+  color: #fffdf9;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.contact-email-button:hover {
+  background: #a66a3f;
+  border-color: #a66a3f;
+  color: #fffdf9;
+  transform: translateY(-2px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .social-link,
+  .social-icon,
+  .social-arrow,
+  .contact-email-button {
+    transition: none;
+  }
+}
+
+/* Automatic portrait zoom animation */
+.portrait-image {
+  animation: portraitZoom 4s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@keyframes portraitZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .portrait-image {
+    animation: none;
+    will-change: auto;
+  }
+}

@@ -1,0 +1,138 @@
+
+/* Education section - matching your homepage theme */
+.education-showcase {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 65px;
+  padding: 75px 7%;
+  background: #f5eee1;
+  color: #211b12;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Left heading */
+.education-intro h2 {
+  border-left: 3px solid #c77a5b;
+  padding-left: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3.3vw, 42px);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-bottom: 22px;
+  color: #211b12;
+}
+
+/* Description */
+.education-intro > p {
+  max-width: 300px;
+  color: #71675b;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* Link */
+.education-link {
+  color: #304c36;
+  border-bottom: 1px solid #304c36;
+  text-decoration: none;
+  font-size: 13px;
+  padding-bottom: 5px;
+}
+
+/* Education rows */
+.education-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 76px;
+  padding: 15px 0 15px 20px;
+  background: #f5eee1;
+  border-top: 1px solid #e2d8c9;
+  border-bottom: 1px solid #e2d8c9;
+  border-left: 3px solid #304c36;
+  transition: background-color 0.25s ease;
+}
+
+.education-row:hover {
+  background: #eee4d5;
+}
+
+/* Different accent colors */
+.education-row.accent-brown {
+  border-left-color: #805044;
+}
+
+.education-row.accent-terracotta {
+  border-left-color: #c77a5b;
+}
+
+.education-row.accent-gold {
+  border-left-color: #c9a33f;
+}
+
+/* Education title */
+.education-info h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #304c36;
+  margin: 0 0 5px;
+}
+
+.education-info p {
+  color: #71675b;
+  font-size: 12px;
+  margin: 0;
+}
+
+.education-number,
+.education-year {
+  color: #827568;
+  font-size: 11px;
+}
+
+/* Footer */
+.education-footer {
+  margin-top: 16px;
+  color: #806f5c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .education-showcase {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 45px 7%;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-showcase {
+    padding: 35px 20px;
+    gap: 25px;
+  }
+
+  .education-row {
+    gap: 10px;
+    padding-left: 12px;
+  }
+
+  .education-info h3 {
+    font-size: 15px;
+  }
+
+  .education-info p {
+    font-size: 11px;
+  }
+
+  .education-year {
+    font-size: 9px;
+  }
+}

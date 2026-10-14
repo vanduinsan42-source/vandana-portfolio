@@ -1,0 +1,222 @@
+/* ===== Main Navbar ===== */
+
+.portfolio-navbar {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  background-color: #f8f3ed;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e6d8ca;
+  box-sizing: border-box;
+}
+
+.navbar-inner {
+  min-height: 38px;
+}
+
+/* ===== Logo and Brand Name ===== */
+
+.navbar-brand-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  display: block;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.vandana-name {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #654321;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ===== Desktop Navigation ===== */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.nav-links a,
+.mobile-nav-links a {
+  color: #654321;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.mobile-nav-links a:hover {
+  color: #a66a3f;
+}
+
+/* ===== Hamburger Icon ===== */
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid #e6d8ca;
+  border-radius: 6px;
+  background: transparent;
+  color: #654321;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menu-toggle:hover {
+  background-color: #efe4d7;
+}
+
+/* ===== Mobile Overlay ===== */
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: rgba(35, 25, 17, 0.45);
+}
+
+/* ===== Mobile Menu Panel ===== */
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(80%, 320px);
+  height: 100%;
+  padding: 75px 28px 30px;
+  box-sizing: border-box;
+  background-color: #f8f3ed;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.12);
+  animation: menuSlideIn 0.25s ease-out;
+}
+
+/* ===== Close Icon ===== */
+
+.menu-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #654321;
+  cursor: pointer;
+}
+
+.menu-close:hover {
+  color: #a66a3f;
+}
+
+/* ===== Mobile Navigation Links ===== */
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-links a {
+  padding: 17px 0;
+  font-size: 17px;
+  border-bottom: 1px solid #e6d8ca;
+}
+
+/* ===== Slide Animation ===== */
+
+@keyframes menuSlideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ===== Tablet and Mobile ===== */
+
+@media (max-width: 768px) {
+  .portfolio-navbar {
+    padding: 15px 16px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .vandana-name {
+    font-size: 23px;
+  }
+}
+
+/* ===== Small Mobile ===== */
+
+@media (max-width: 380px) {
+  .portfolio-navbar {
+    padding: 12px;
+  }
+
+  .navbar-brand-custom {
+    gap: 8px;
+  }
+
+  .navbar-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vandana-name {
+    font-size: 21px;
+  }
+
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* ===== Accessibility ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu {
+    animation: none;
+  }
+
+  .nav-links a,
+  .mobile-nav-links a {
+    transition: none;
+  }
+}
