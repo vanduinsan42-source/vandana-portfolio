@@ -24,9 +24,9 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="nav-links desktop-nav">
+          <a href="#work">Projects</a>
           <a href="#education">Education</a>
           <a href="#experience">Experience</a>
-          <a href="#work">Projects</a>
           <a href="#contact">Contact Me</a>
         </div>
 
@@ -59,14 +59,14 @@ export default function Navbar() {
             </button>
 
             <div className="mobile-nav-links">
+              <a href="#work" onClick={closeMenu}>
+                Projects
+              </a>
               <a href="#education" onClick={closeMenu}>
                 Education
               </a>
               <a href="#experience" onClick={closeMenu}>
                 Experience
-              </a>
-              <a href="#work" onClick={closeMenu}>
-                Projects
               </a>
               <a href="#contact" onClick={closeMenu}>
                 Contact Me

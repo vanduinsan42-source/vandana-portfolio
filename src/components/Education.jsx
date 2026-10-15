@@ -4,20 +4,20 @@ import "./Education.css";
 const educationDetails = [
   {
     title: "Bachelor's Degree",
-    subtitle: "Your degree name and university",
-    year: "2023 – 2026",
+    subtitle: "Bachelor's of Computer Application · Shah Satnam Ji Girls College, Sirsa (CDLU)",
+    year: "2024 – Pursuing",
     accent: "brown",
   },
   {
     title: "Senior Secondary School",
-    subtitle: "Class 12 · Your school name",
-    year: "2021 – 2023",
+    subtitle: "Class 12 · GSSS, Ahli Noorki",
+    year: "2023 – 2024",
     accent: "terracotta",
   },
   {
     title: "Secondary School",
-    subtitle: "Class 10 · Your school name",
-    year: "2019 – 2021",
+    subtitle: "Class 10 · GSSS, Ahli Noorki",
+    year: "2021 – 2022",
     accent: "gold",
   },
 ];
@@ -42,10 +42,6 @@ export default function Education() {
         <a href="#education-list" className="education-link">
           Explore my education <span>↗</span>
         </a>
-
-        <span className="education-watermark" aria-hidden="true">
-          LEARN
-        </span>
       </div>
 
       {/* Right side */}

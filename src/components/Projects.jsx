@@ -1,42 +1,27 @@
 import React, { useState } from "react";
 import "./Projects.css";
+import weather from "../assets/weather.jpeg";
+import recipe from "../assets/Recipe.jpeg"
+import portfolio from "../assets/port.png"
 
 const projects = [
   {
     number: "01",
     title: "AI Recipe App",
     description: "Discover delicious recipes using ingredients available at home.",
-    image: "/images/recipe.jpg",
+    image: recipe,
   },
   {
     number: "02",
     title: "Personal Portfolio",
     description: "A creative portfolio showcasing my skills and projects.",
-    image: "/images/portfolio.jpg",
+    image: portfolio,
   },
   {
     number: "03",
-    title: "Student Management",
-    description: "Manage student records with a simple, user-friendly interface.",
-    image: "/images/students.jpg",
-  },
-  {
-    number: "04",
     title: "Weather App",
     description: "Check weather conditions and temperature for different cities.",
-    image: "/images/weather.jpg",
-  },
-  {
-    number: "05",
-    title: "E-commerce Website",
-    description: "Explore a clean and responsive online shopping experience.",
-    image: "/images/ecommerce.jpg",
-  },
-  {
-    number: "06",
-    title: "Task Manager",
-    description: "Organize daily tasks and keep track of your productivity.",
-    image: "/images/tasks.jpg",
+    image: weather,
   },
 ];
 
