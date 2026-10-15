@@ -11,9 +11,9 @@ export default function Components() {
         <div className="components">
             <Navbar />
             <Home />
-            <Experience />
             <Projects />
             <Education />
+            <Experience />
             <Contact />
             
         </div>
