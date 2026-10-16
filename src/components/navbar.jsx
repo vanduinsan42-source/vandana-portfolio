@@ -59,6 +59,9 @@ export default function Navbar() {
             </button>
 
             <div className="mobile-nav-links">
+              <a href="#home" onClick={closeMenu}>
+                Home
+              </a>
               <a href="#work" onClick={closeMenu}>
                 Projects
               </a>
