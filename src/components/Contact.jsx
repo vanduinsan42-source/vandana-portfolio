@@ -5,7 +5,6 @@ export default function Contact() {
   return (
     <footer className="contact-section" id="contact">
       <div className="contact-main">
-
         {/* Left content */}
         <div className="contact-intro">
           <span className="contact-eyebrow">
@@ -85,7 +84,7 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Black bottom footer */}
+      {/* Black footer bar */}
       <div className="contact-footer-bar">
         <div className="contact-footer-inner">
           <a href="#home" className="contact-brand">

@@ -1,4 +1,3 @@
-/* Main contact section — portfolio theme */
 .contact-section {
   width: 100%;
   margin: 0;
@@ -9,18 +8,22 @@
 }
 
 /* Main layout */
+
 .contact-main {
   width: 100%;
+  max-width: 1250px;
   margin: 0 auto;
   padding-bottom: 65px;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 80px;
   align-items: center;
-  margin-bottom: 6rem;
 }
 
-/* Left content */
+/* =========================
+   Left Content
+========================= */
+
 .contact-intro {
   max-width: 600px;
 }
@@ -57,7 +60,10 @@
   margin: 0 0 28px;
 }
 
-/* Right links */
+/* =========================
+   Social Links
+========================= */
+
 .contact-socials {
   width: 100%;
   max-width: 460px;
@@ -146,10 +152,13 @@
   transform: translate(3px, -3px);
 }
 
-/* Black footer bar only */
+/* =========================
+   Black Footer Bar
+========================= */
+
 .contact-footer-bar {
-  width: calc(100% + 16.5% + 0px);
-  margin-left: -9%;
+  width: calc(100% + 14%);
+  margin-left: -7%;
   padding: 0 7%;
   box-sizing: border-box;
   background: #171916;
@@ -171,6 +180,7 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
+  flex-shrink: 0;
   color: #f5eee1;
   font-family: Georgia, serif;
   font-size: 16px;
@@ -184,6 +194,7 @@
 .brand-dot {
   width: 8px;
   height: 8px;
+  flex-shrink: 0;
   background: #c49a70;
   border-radius: 50%;
 }
@@ -195,7 +206,10 @@
   margin: 0;
 }
 
-/* Tablet */
+/* =========================
+   Tablet
+========================= */
+
 @media (max-width: 900px) {
   .contact-section {
     padding: 55px 5% 0;
@@ -212,31 +226,56 @@
   }
 
   .contact-footer-bar {
-    width: calc(100% + 10% + 0px);
+    width: calc(100% + 10%);
     margin-left: -5%;
     padding: 0 5%;
   }
+
+  .contact-footer-inner {
+    gap: 12px;
+  }
+
+  .contact-brand {
+    font-size: 14px;
+  }
+
+  .contact-footer-inner p,
+  .contact-copyright {
+    font-size: 11px;
+  }
 }
 
-/* Mobile */
+/* =========================
+   Mobile
+========================= */
+
 @media (max-width: 650px) {
   .contact-section {
-    padding: 45px 22px 0;
+    padding: 45px 18px 0;
   }
 
   .contact-main {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding-bottom: 40px;
+    gap: 35px;
+    padding-bottom: 35px;
   }
 
   .contact-intro h2 {
-    font-size: clamp(36px, 9vw, 46px);
-    margin: 18px 0;
+    font-size: clamp(34px, 8vw, 44px);
+    line-height: 1.15;
+    margin: 16px 0;
   }
 
   .contact-intro > p {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .contact-eyebrow,
+  .contact-social-heading {
+    font-size: 10px;
+    letter-spacing: 2px;
   }
 
   .contact-socials {
@@ -245,21 +284,113 @@
   }
 
   .social-link {
-    min-height: 78px;
-    gap: 13px;
+    min-height: 70px;
+    padding: 12px 0;
+    gap: 11px;
+  }
+
+  .social-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .social-icon i {
+    font-size: 16px;
+  }
+
+  .social-info {
+    gap: 3px;
+  }
+
+  .social-info strong {
+    font-size: 16px;
+  }
+
+  .social-info small {
+    font-size: 11px;
+  }
+
+  .social-arrow {
+    font-size: 16px;
+  }
+
+  /* Full-width black footer */
+  .contact-footer-bar {
+    width: calc(100% + 36px);
+    margin-left: -18px;
+    padding: 0 12px;
+  }
+
+  /* Keep all three footer items in one row */
+  .contact-footer-inner {
+    width: 100%;
+    min-height: 58px;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .contact-brand {
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .brand-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .contact-footer-inner p,
+  .contact-copyright {
+    font-size: 9px;
+    line-height: 1.3;
+  }
+}
+
+/* =========================
+   Very Small Phones
+========================= */
+
+@media (max-width: 380px) {
+  .contact-section {
+    padding-right: 14px;
+    padding-left: 14px;
   }
 
   .contact-footer-bar {
-    width: calc(100% + 44px);
-    margin-left: -22px;
-    padding: 0 22px;
+    width: calc(100% + 28px);
+    margin-left: -14px;
+    padding: 0 8px;
   }
 
   .contact-footer-inner {
-    min-height: auto;
-    padding: 22px 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 13px;
+    gap: 5px;
+  }
+
+  .contact-brand {
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .contact-footer-inner p,
+  .contact-copyright {
+    font-size: 8px;
+    letter-spacing: -0.2px;
+  }
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .social-link,
+  .social-icon,
+  .social-arrow {
+    transition: none;
   }
 }

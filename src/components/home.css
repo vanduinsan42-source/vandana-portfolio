@@ -1,12 +1,11 @@
-
 .home-page {
   overflow: hidden;
   background: #f5eee1;
   color: #211b12;
   font-family: Arial, sans-serif;
+  width: 100%;
 }
 
-/* Main hero layout */
 .hero-section {
   min-height: 430px;
   display: grid;
@@ -16,150 +15,182 @@
   gap: 40px;
 }
 
-/* Left introduction */
 .intro-content {
   max-width: 440px;
+  position: relative;
   z-index: 1;
 }
 
 .intro-content h1 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(42px, 5vw, 68px);
   font-weight: 700;
   font-style: italic;
   line-height: 1.08;
   letter-spacing: -2px;
-  margin-bottom: 18px;
+  margin: 0 0 18px;
 }
 
 .intro-description {
   max-width: 360px;
   font-size: 15px;
-  line-height: 1.5;
-  margin-bottom: 28px;
+  line-height: 1.7;
+  margin: 0 0 28px;
 }
 
-.linkedin-button {
+/* =========================
+   Hero Buttons
+========================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-email-button,
+.work-button {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background: #0f4919;
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 22px;
-  border-radius: 30px;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 12px 20px;
+  border-radius: 5px;
   font-size: 14px;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.linkedin-button:hover {
-  background: #1c743e;
+.contact-email-button {
+  background: #a45e2c;
+  border: 1px solid #a45e2c;
+  color: #fffdf9;
+}
+
+.contact-email-button:hover {
+  background: #82451f;
+  border-color: #82451f;
   color: #fff;
+  transform: translateY(-2px);
 }
 
-/* Portrait on the right */
+.work-button {
+  background: transparent;
+  color: #304c36;
+  border: 1px solid #304c36;
+}
+
+.work-button:hover {
+  background: #304c36;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
 .portrait-section {
-  min-height: 370px;
   position: relative;
+  min-width: 0;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
+  isolation: isolate;
 }
 
 .portrait-image {
+  display: block;
   position: relative;
   z-index: 1;
   width: 72%;
-  height: 588px;
+  height: 480px;
   object-fit: cover;
   object-position: center top;
-  border-radius: 2px;
+  border-radius: 4px;
+  transform-origin: center center;
+  animation: portraitZoom 4s ease-in-out infinite;
 }
 
-/* Orange information labels */
 .info-pill {
   position: absolute;
-  z-index: 4;
+  z-index: 2;
   background: #a45e2c;
   color: #fff9f4;
-  padding: 14px 24px;
+  padding: 13px 18px;
   border-radius: 30px;
   text-align: center;
   font-size: 13px;
-  min-width: 165px;
+  font-weight: 500;
+  min-width: 145px;
+  max-width: 48%;
+  line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: 0 5px 15px rgb(33 27 18 / 12%);
+  pointer-events: none;
 }
 
 .date-pill {
-  top: 27%;
+  top: 25%;
   left: 0;
 }
 
 .language-pill {
-  right: -2%;
-  top: 51%;
+  top: 55%;
+  right: 0;
 }
 
-/* Black contact card */
-.contact-card {
-  position: absolute;
-  z-index: 3;
-  bottom: -15px;
-  left: 12%;
-  width: 75%;
-  background: #080808;
-  color: #fff;
-  padding: 18px 22px;
+
+@keyframes portraitZoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
 }
 
-.contact-card h3 {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-style: italic;
-  font-weight: 700;
-  text-align: center;
-  font-size: 23px;
-  margin-bottom: 12px;
+/* =========================
+   Tablet Responsive
+========================= */
+
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 40px 6%;
+    gap: 25px;
+  }
+
+  .intro-content h1 {
+    font-size: clamp(42px, 5vw, 58px);
+  }
+
+  .portrait-section {
+    min-height: 420px;
+  }
+
+  .portrait-image {
+    width: 76%;
+    height: 420px;
+  }
+
+  .info-pill {
+    min-width: 0;
+    padding: 11px 13px;
+    font-size: 12px;
+  }
 }
 
-.contact-card p {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 12px;
-  margin-bottom: 8px;
-  overflow-wrap: anywhere;
-}
-
-.contact-card i {
-  color: #fff;
-  flex-shrink: 0;
-}
-
-/* Bottom green section */
-.education-section {
-  min-height: 160px;
-  background: #304c36;
-  color: #ffad0a;
-  padding: 35px 16%;
-}
-
-.education-section h2 {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 34px;
-  font-style: italic;
-  font-weight: 700;
-}
-
-.education-section p {
-  color: #f5eee1;
-  font-size: 14px;
-}
-
-/* Tablet and mobile */
 @media (max-width: 768px) {
   .hero-section {
     grid-template-columns: 1fr;
-    padding: 40px 7%;
-    gap: 20px;
+    padding: 35px 6% 25px;
+    gap: 15px;
   }
 
   .intro-content {
@@ -167,119 +198,139 @@
   }
 
   .intro-content h1 {
-    font-size: 48px;
+    font-size: clamp(42px, 8vw, 48px);
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
   }
 
+  .intro-description {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .contact-email-button,
+  .work-button {
+    min-height: 44px;
+    padding: 11px 14px;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  /* Image container */
   .portrait-section {
-    min-height: 390px;
-    margin: 10px 0 20px;
+    width: 100%;
+    min-height: 350px;
+    margin: 8px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
 
+  /* Image size */
   .portrait-image {
-    width: 70%;
+    width: 72%;
     height: 320px;
+    object-fit: cover;
+    object-position: center top;
   }
 
+  /* Smaller labels on mobile */
+  .info-pill {
+    min-width: 0;
+    max-width: 38%;
+    padding: 10px 12px;
+    font-size: 10px;
+    line-height: 1.35;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  /* Frontend Developer label */
   .date-pill {
-    left: -2%;
+    top: 20%;
+    left: 0;
   }
 
+  /* React and JavaScript label */
   .language-pill {
-    right: -2%;
-  }
-
-  .contact-card {
-    left: 12%;
-    width: 76%;
-  }
-
-  .education-section {
-    padding: 30px 7%;
+    top: 57%;
+    right: 0;
   }
 }
 
 @media (max-width: 420px) {
+  .hero-section {
+    padding: 30px 5% 20px;
+    gap: 12px;
+  }
+
   .intro-content h1 {
     font-size: 42px;
   }
 
+  .intro-description {
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    gap: 8px;
+  }
+
+  .contact-email-button,
+  .work-button {
+    min-height: 42px;
+    padding: 10px 12px;
+    font-size: 12px;
+    gap: 7px;
+  }
+
+  /* Portrait area */
   .portrait-section {
-    min-height: 340px;
+    min-height: 300px;
+    margin: 5px 0;
   }
 
   .portrait-image {
-    height: 270px;
+    width: 70%;
+    height: 280px;
+    object-position: center top;
   }
 
+  /* Labels stay near image edges */
   .info-pill {
-    min-width: auto;
-    padding: 11px 14px;
-    font-size: 11px;
+    max-width: 35%;
+    padding: 9px 10px;
+    font-size: 9px;
+    line-height: 1.3;
+    border-radius: 25px;
   }
 
-  .contact-card {
-    padding: 15px;
+  .date-pill {
+    top: 20%;
+    left: 0;
   }
-}
 
-.contact-email-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 14px 22px;
-  background: #ca8a56;
-  border: 1px solid #a45e2c;
-  border-radius: 4px;
-  color: #fffdf9;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-
-.contact-email-button:hover {
-  background: #a66a3f;
-  border-color: #a66a3f;
-  color: #fffdf9;
-  transform: translateY(-2px);
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .social-link,
-  .social-icon,
-  .social-arrow,
-  .contact-email-button {
-    transition: none;
+  .language-pill {
+    top: 58%;
+    right: 0;
   }
 }
 
-/* Automatic portrait zoom animation */
-.portrait-image {
-  animation: portraitZoom 4s ease-in-out infinite;
-  transform-origin: center center;
-  will-change: transform;
-}
 
-@keyframes portraitZoom {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.06);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .portrait-image {
     animation: none;
-    will-change: auto;
+  }
+
+  .contact-email-button,
+  .work-button {
+    transition: none;
   }
 }
